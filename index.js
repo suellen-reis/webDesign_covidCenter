@@ -1,34 +1,47 @@
 // config.json file is a confidential file. Ask the administrator for the details
 
+// ####################################
+// # Select data source (API or file) #
+// ####################################
+// Only one of the following function should be activated at a time
+
+// Use the following function if API connection is needed
+// apiConnection();
+
+// Use the following function if file connection is needed
+fileConnection();
+
+// ----------------------------------------------------------------------------
+
 // #######################
 // # Fetch data from API #
 // #######################
 // Get all COVID-19 data from API
+import config from "./data/config.json" assert { type: "json" };
+function apiConnection(){
+    const data = config[0]["end-point"];
+    const options = {
+        method: 'GET',
+        headers: {
+        'X-RapidAPI-Key': config[0]["key"],
+        'X-RapidAPI-Host': config[0]["host"]
+        }
+    };
 
-// import config from "./data/config.json" assert { type: "json" };
-// const data = config[0]["end-point"];
-
-// const options = {
-//     method: 'GET',
-//     headers: {
-//     'X-RapidAPI-Key': config[0]["key"],
-//     'X-RapidAPI-Host': config[0]["host"]
-//     }
-// };
-
-// fetch(data, options)
-//     .then(res => res.json())
-//     .then(json => {
-//         generateTableGlobal(json);
-//         generateTableAsia(json);
-//         generateTableAfrica(json);
-//         generateTableEurope(json);
-//         generateTableNorthAmerica(json);
-//         generateTableOceania(json);
-//         generateTableSouthAmerica(json);
-        
-//     })
-//     .catch(err => console.error('error:' + err));
+    fetch(data, options)
+        .then(res => res.json())
+        .then(json => {
+            generateTableGlobal(json);
+            generateTableAsia(json);
+            generateTableAfrica(json);
+            generateTableEurope(json);
+            generateTableNorthAmerica(json);
+            generateTableOceania(json);
+            generateTableSouthAmerica(json);
+            plotMap(json)
+        })
+        .catch(err => console.error('error:' + err));
+}
 
 // ----------------------------------------------------------------------------
 
@@ -37,6 +50,16 @@
 // #############################
 // Get Covid data from json
 import covidJson from "./data/covid.json" assert { type: "json" };
+function fileConnection(){
+    plotMap(covidJson);
+    generateTableGlobal(covidJson);
+    generateTableAsia(covidJson);
+    generateTableAfrica(covidJson);
+    generateTableEurope(covidJson);
+    generateTableNorthAmerica(covidJson);
+    generateTableOceania(covidJson);
+    generateTableSouthAmerica(covidJson);
+}
 
 // ----------------------------------------------------------------------------
 
@@ -57,6 +80,7 @@ function plotMap(rawData){
         locations: unpack(rawData, 'Country'),
         z: unpack(rawData, 'TotalCases'),
         zmin: 0,
+        zmax: 40000000,
         // // dtick: 10000,
         marker: {
             line: {
@@ -88,8 +112,6 @@ function plotMap(rawData){
     };
     Plotly.newPlot("covid-map", data, layout, {showLink: false});
 }
-
-plotMap(covidJson)
 
 // ----------------------------------------------------------------------------
 
@@ -198,17 +220,6 @@ function generateTable(data, continent, id){
     }
     document.getElementById(id).appendChild(table);
 }
-
-
-// Call functions ( this part works if we get data from json)
-// If we get data from API these calls need to be commented
-generateTableGlobal(covidJson);
-generateTableAsia(covidJson);
-generateTableAfrica(covidJson);
-generateTableEurope(covidJson);
-generateTableNorthAmerica(covidJson);
-generateTableOceania(covidJson);
-generateTableSouthAmerica(covidJson);
 
 // ----------------------------------------------------------------------------
 
