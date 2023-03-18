@@ -72,7 +72,8 @@ function unpack(objects, key) {
         else return object[key]; 
     });
 }
-function plotMap(rawData){
+function plotMap(originalData){
+    var rawData = [...originalData];
     rawData.splice(0, 2);
     var data = [{
         type: 'choropleth',
