@@ -16,19 +16,19 @@ fileConnection();
 // #######################
 // # Fetch data from API #
 // #######################
-// Get all COVID-19 data from API
 import config from "./data/config.json" assert { type: "json" };
 function apiConnection(){
-    const data = config[0]["end-point"];
-    const options = {
+    // Get all COVID-19 data from API
+    let covidEndPoint = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/";
+    let options = {
         method: 'GET',
         headers: {
         'X-RapidAPI-Key': config[0]["key"],
-        'X-RapidAPI-Host': config[0]["host"]
+        'X-RapidAPI-Host': "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
         }
     };
 
-    fetch(data, options)
+    fetch(covidEndPoint, options)
         .then(res => res.json())
         .then(json => {
             generateTableGlobal(json);
@@ -41,6 +41,15 @@ function apiConnection(){
             plotMap(json)
         })
         .catch(err => console.error('error:' + err));
+    
+    // Get news data from API
+    let newsEndPoint = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/news/get-coronavirus-news/0";
+    fetch(newsEndPoint, options)
+        .then(res => res.json())
+        .then(json => {
+            generateNews(json);
+        })
+        .catch(err => console.error('error:' + err));
 }
 
 // ----------------------------------------------------------------------------
@@ -50,8 +59,9 @@ function apiConnection(){
 // #############################
 // Get Covid data from json
 import covidJson from "./data/covid.json" assert { type: "json" };
+// Get NEWS data from JSON
+import news from "./data/news.json" assert { type: "json" };
 function fileConnection(){
-    plotMap(covidJson);
     generateTableGlobal(covidJson);
     generateTableAsia(covidJson);
     generateTableAfrica(covidJson);
@@ -59,6 +69,8 @@ function fileConnection(){
     generateTableNorthAmerica(covidJson);
     generateTableOceania(covidJson);
     generateTableSouthAmerica(covidJson);
+    plotMap(covidJson);
+    generateNews(news);
 }
 
 // ----------------------------------------------------------------------------
@@ -227,32 +239,29 @@ function generateTable(data, continent, id){
 // ###########################
 // # Second container - News #
 // ###########################
-
-// Get NEWS data from JSON
-import news from "./data/news.json" assert { type: "json" };
-
-var newsArr = news["news"];
-var newsBlocks = document.querySelectorAll(".news-blocks");
-
-const MONTHS = {
-    0: 'January',
-    1: 'February',
-    2: 'March',
-    3: 'April',
-    4: 'May',
-    5: 'June',
-    6: 'July',
-    7: 'August',
-    8: 'September',
-    9: 'October',
-    10: 'November',
-    11: 'December'
-  }
-for (var i=0; i<newsBlocks.length; i++){
-    newsBlocks[i].querySelector('a').setAttribute("href", newsArr[i]["link"]);
-    newsBlocks[i].querySelector('a h3').textContent = newsArr[i]["title"];
-    newsBlocks[i].querySelector('a img').setAttribute("src", newsArr[i]["urlToImage"]);
-    var newsDate = new Date(newsArr[i]["pubDate"]);
-    var newsDateFormatted = newsDate.getDate() + " " + MONTHS[newsDate.getMonth()] + " " + newsDate.getFullYear();
-    newsBlocks[i].querySelector('a p').textContent = newsDateFormatted;
-}
+function generateNews(data){
+    const MONTHS = {
+        0: 'January',
+        1: 'February',
+        2: 'March',
+        3: 'April',
+        4: 'May',
+        5: 'June',
+        6: 'July',
+        7: 'August',
+        8: 'September',
+        9: 'October',
+        10: 'November',
+        11: 'December'
+      }
+    var newsArr = data["news"];
+    var newsBlocks = document.querySelectorAll(".news-blocks");
+    for (var i=0; i<newsBlocks.length; i++){
+        newsBlocks[i].querySelector('a').setAttribute("href", newsArr[i]["link"]);
+        newsBlocks[i].querySelector('a h3').textContent = newsArr[i]["title"];
+        newsBlocks[i].querySelector('a img').setAttribute("src", newsArr[i]["urlToImage"]);
+        var newsDate = new Date(newsArr[i]["pubDate"]);
+        var newsDateFormatted = newsDate.getDate() + " " + MONTHS[newsDate.getMonth()] + " " + newsDate.getFullYear();
+        newsBlocks[i].querySelector('a p').textContent = newsDateFormatted;
+    }
+}  
