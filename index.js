@@ -109,9 +109,9 @@ function plotMap(originalData){
     
     var layout = {
         // title: 'Total infection in each country',
-        margin: {"r":30,"t":0,"l":0,"b":20},
+        margin: {"r":35,"t":0,"l":0,"b":20},
         paper_bgcolor: "#171717",
-        plot_bgcolor: "#444444",
+        plot_bgcolor: "rgba(0,0,0,0)",
         font: {
             color:"white",
             family: "Overpass",

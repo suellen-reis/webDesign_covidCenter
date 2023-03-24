@@ -1,7 +1,7 @@
 import history from "/data/historical.json" assert { type: "json" };
 import covidJson from "/data/covid.json" assert { type: "json" };
 
-function plotHistorical(plottingCountry, data){
+function plotHistorical(data, plottingCountry){
     let filteredData = data.filter(country => country.symbol === plottingCountry);
     filteredData.sort(function compare(a, b) {
         var dateA = new Date(a.date);
@@ -24,26 +24,48 @@ function plotHistorical(plottingCountry, data){
     var trace1 = {
         x: dateAxis,
         y: newCase,
-        type: 'scatter'
+        type: 'scatter',
+        name: "Cases"
     };
     
     var trace2 = {
         x: dateAxis,
         y: newDeath,
         type: 'scatter',
-        yaxis: 'y2'
+        yaxis: 'y2',
+        name: "Deaths",
+        marker: {
+            color: "#DA0037"
+        }
     };
     
     var data = [trace1, trace2];
     var layout = {
-        yaxis: {title: 'Number of cases'},
+        yaxis: {
+            title: 'Number of cases',
+            showgrid: false
+        },
         yaxis2: {
           title: 'Number of deaths',
-        //   titlefont: {color: 'rgb(148, 103, 189)'},
-        //   tickfont: {color: 'rgb(148, 103, 189)'},
           overlaying: 'y',
-          side: 'right'
-        }
+          side: 'right',
+          showgrid: false
+        },
+        xaxis: {
+            showgrid: false
+        },
+        paper_bgcolor: "#171717",
+        plot_bgcolor: "#171717",
+        font: {
+            color:"white",
+            family: "Overpass",
+            size: 15
+        },
+        legend: {
+            "orientation": "h",
+            x: 0.5
+        },
+        margin: {"t": 0}
       };
       
     Plotly.newPlot('lineChart', data, layout);
@@ -117,5 +139,5 @@ function generateTable(data, selectedCountry, tableId) {
 
 let countryName = document.querySelector("#country-name").getAttribute("data-country");
 let countrySymbol = document.querySelector("#country-name").getAttribute("data-symbol");
-plotHistorical(countrySymbol, history);
+plotHistorical(history, countrySymbol);
 generateTable(covidJson, countryName, "covidTable");
