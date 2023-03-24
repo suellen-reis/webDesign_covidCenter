@@ -1,0 +1,24 @@
+div#covidTable table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+div#covidTable tr {
+    display: block;
+    float: left;
+    border: none;
+    width: 50%;
+}
+
+div#covidTable tr:hover {
+    background-color: #171717;
+    color: #EDEDED;
+}
+
+th, td {
+    display: block;
+    border-bottom: solid 0.1px grey;
+}
+td:first-child{
+    width: auto;
+}
