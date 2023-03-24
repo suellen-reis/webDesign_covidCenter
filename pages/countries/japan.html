@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
 </head>
 
 <body>
@@ -34,8 +35,9 @@
 
     <body>
         <div id="first-container">
-            <p>countries/Japan</p>
-            <div id="covidDataJapan"></div>
+            <h1 data-country="Japan" data-symbol="JPN" id="country-name">Japan</h1>
+            <div id="lineChart"></div>
+            <div id="covidTable"></div>
         </div>
         
 
@@ -43,7 +45,7 @@
     <footer>
         <p>&copy; 2023 Trinity team</p>
     </footer>
-    <script type="module" src="/scripts/japan.js" async defer></script>
+    <script type="module" src="/scripts/countries.js" defer></script>
 </body>
 
 </html>
