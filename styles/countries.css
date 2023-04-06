@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+main {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+=======
+h1#country-name{
+    color: #DA0037;
+}
+
+div#covidTable table{
+    border-collapse: collapse;
+    width: 100%;
+>>>>>>> c7a1c49 (-Add line chart on countries page)
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+tr {
+    display: block;
+    float: left;
+}
 h1#country-name{
     color: #DA0037;
 }
@@ -17,12 +43,4 @@ div#covidTable tr {
 div#covidTable tr:hover {
     background-color: #171717;
     color: #EDEDED;
-}
-
-th, td {
-    display: block;
-    border-bottom: solid 0.1px grey;
-}
-td:first-child{
-    width: auto;
 }

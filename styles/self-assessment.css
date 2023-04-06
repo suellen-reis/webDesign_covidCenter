@@ -15,19 +15,18 @@ main {
     background-color: #EDEDED;
     color: #171717;
     min-height: 100%;
-    font-size: 21px;
+    font-size: 120%;
     font-weight: 400;
-
 }
 
 
 .section-secondary {
     border: 2px solid transparent;
-    width: 60%;
     display: block;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 
@@ -52,9 +51,176 @@ main {
 }
 
 
-
-
 footer {
     padding: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 820px) {
+html {
+        font-size: 100%;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .logo {
+        width: 20%;
+        margin: 5% 2% 5% 10%;
+    }
+
+
+    header ul {
+        margin: 3%;
+        padding: 0;
+        padding-bottom: 2%;
+    }
+
+    a.nav,
+    .dropdown a {
+        font-size: 130%;
+
+    }
+
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+    }
+
+    .section-secondary {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .section-secondary p {
+        text-align: justify;
+        font-size: 150%;
+    }
+
+    .section-secondary ul {
+        font-size: 120%;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 0 3% 0 3%;
+    }
+
+    #results ul {
+        font-size: 140%;
+    }
+
+    .button-primary {
+        font-size: 120%;
+    }
+
+    .button-no-margin {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 3%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .logo {
+        width: 80%;
+        margin: 7% 10% 7% 10%;
+    }
+
+   
+    header ul {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 3%;
+    }
+
+    a.nav, .dropdown a {
+        font-size: 110%;
+        margin: 8px;
+
+    }
+
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+    }
+
+    .section-secondary {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .section-secondary h2 {
+        font-size: 140%;
+    }
+
+    .section-secondary h3 {
+        font-size: 130%;
+    }
+
+    .section-secondary h4 {
+        font-size: 130%;
+    }
+
+
+    .section-secondary p {
+        text-align: justify;
+        font-size: 130%;
+    }
+
+    #results h2 {
+        font-size: 120%;
+    }
+
+    #results p {
+        font-size: 115%;
+    }
+
+    #results ul {
+        font-size: 115%;
+    }
+
+
+    .button-primary {
+        font-size: 96%;
+        margin-left: 15%;
+        margin-right: 10%;
+        float: none;
+    }
+
+    .button-no-margin {
+        margin: 0;
+        padding: 1%;
+    }
+
+    .button-secondary {
+        font-size: 90%;
+        padding: 2%;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 3%;
+    }
+
+
+
 }
 
