@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Self-Assessment</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles/self-assessment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <a class="nav dropdown-btn">Countries</a>
+                        <div class="dropdown-content">
+                            <a href="/pages/countries/usa.html">USA</a>
+                            <a href="/pages/countries/canada.html">Canada</a>
+                            <a href="/pages/countries/brazil.html">Brazil</a>
+                            <a href="/pages/countries/japan.html">Japan</a>
+                            <a href="/pages/countries/thailand.html">Thailand</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/pages/self_assessment/self_assessment.html" class="nav">Self Assessment</a></li>
+                <li><a href="/pages/contact.html" class="nav">Medical Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-secondary">
+            <h2>COVID-19 Self-Assessment</h2>
+            <h3>Do you currently have any of the following symptoms?</h3>
+            <ul>
+                <li>Severe difficulty breathing (e.g., struggling for each breath, can only speak in single words)</li>
+                <li>Severe chest pain (e.g.,constant tightness or crushing sensation)</li>
+                <li>feeling confused or disoriented</li>
+                <li>Extreme fatigue (having a hard time waking up or staying awake)</li>
+                <li>Losing consciousness</li>
+                <li>Chronic health conditions that you are having difficulty managing because of your current respiratory illness</li>
+            </ul>
+
+            
+
+            <div class="bottom-buttons">
+                <button class="button-secondary button-previous" onclick="location.href='self_assessment.html';">Previous Page</button>
+
+                <span>
+                    <!-- YES = go to severe_symptoms_yes page -->
+                    <button class="button-primary button-radio button-no-margin" onclick="location.href='result1.html';">YES</button>
+            
+                    <!-- NO = go to question_other_symptoms -->
+                    <button class="button-primary button-radio button-no-margin" onclick="location.href='question_other_symptoms.html';">NO</button>                
+                </span>
+
+            </div>
+
+
+            <br>
+        </section>
+        
+
+
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Trinity team</p>
+    </footer>
+</body>
+
+</html>

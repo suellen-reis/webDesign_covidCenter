@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Canada</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles/countries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400;500;700&family=Overpass:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <a class="nav dropdown-btn">Countries</a>
+                        <div class="dropdown-content">
+                            <a href="/pages/countries/usa.html">USA</a>
+                            <a href="/pages/countries/canada.html">Canada</a>
+                            <a href="/pages/countries/brazil.html">Brazil</a>
+                            <a href="/pages/countries/japan.html">Japan</a>
+                            <a href="/pages/countries/thailand.html">Thailand</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/pages/self_assessment/self_assessment.html" class="nav">Self Assessment</a></li>
+                <li><a href="/pages/contact.html" class="nav">Medical Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="first-container">
+            <h1 data-country="Canada" data-symbol="CAN" id="country-name">Canada</h1>
+            <div id="lineChart"></div>
+            <div id="covidTable"></div>
+        </div>
+        
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Trinity team</p>
+    </footer>
+    <script type="module" src="/scripts/countries.js" defer></script>
+</body>
+
+</html>

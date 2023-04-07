@@ -4,9 +4,8 @@ https://colorhunt.co/palette/171717444444da0037ededed */
 /* Icon
 https://www.flaticon.com/packs/coronavirus-154?word=covid&style_id=8&family_id=3&group_id=1 */
 
+
 body{
-    /* background-image: linear-gradient(#171717, #444444);
-    background-attachment: fixed; */
     background-color: #171717;
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
@@ -36,12 +35,17 @@ header ul li{
     display: inline;
 }
 
+/* Styling of dropdown in NAV bar */
 a.nav, .dropdown a{
     text-decoration: none;
     font-size: 1.5rem;
     margin: 20px;
     font-weight: 300;
     color: inherit;
+}
+
+a.nav:hover, .dropdown a:hover{
+    border-bottom: 1px solid #EDEDED;
 }
 
 .dropdown{
@@ -60,7 +64,6 @@ a.nav, .dropdown a{
     z-index: 1;
     position: absolute;
     box-shadow: 1px;
-    margin-left: 120px;
 }
 
 .dropdown-content a{
@@ -75,17 +78,164 @@ a.nav, .dropdown a{
 .dropdown-content a:hover{
     background-color: #EDEDED;
     color: #171717;
+    text-shadow: none;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
-  /* 1st-Intro */
-  #first-container{
+
+/* Buttons Style */
+.button-primary {
+    background-color: #DA0037;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 50px;
+}
+
+.button-primary:hover {
+    background-color: #FFFFFF;
+    color: #DA0037;
+}
+
+.button-secondary {
+    background-color: #444444;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    height: 40px;
+    width: 120px;
+}
+.button-secondary:hover {
+    background-color: #171717;
+    color: #FFFFFF ;
+}
+
+.button-radio {
+    height: 40px;
+    width: 80px;
+}
+
+
+/* ######### */
+/* Home page */
+/* ######### */
+
+
+/* Containers */
+#first-container, #second-container{
     clear: right;
+    padding-top: 50px;
+    width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
-  }
-  #first-container img {
-    float: left;
-  } 
+}
+/* Titles */
+.main-title{
+    color: #DA0037;
+}
+
+/* First container */
+#first-container table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+#first-container table td, #first-container table th{
+    padding: 3px 10px;
+}
+#first-container table tr{
+    border-bottom: solid 0.1px grey;
+}
+/* On hover of each row */
+#first-container table tr:hover{
+    background-color: #EDEDED;
+    color: #DA0037;
+    transition: background-color 0.3s, color 0.3s;
+}
+#first-container table tr:first-child:hover{
+    background-color: #171717;
+    color: #EDEDED;
+}
+
+/* Table Tiles Style */
+.tableTitle {
+    margin-block-end: 0;
+    color: #ff8ca9;
+}
+td:first-child{
+    width: 200px;
+}
+
+/* 2nd Container */
+.news-blocks{
+    background-color: #444444;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.news-blocks:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.news-blocks a{
+    text-decoration: none;
+}
+.news-blocks .news-img{
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.news-blocks .news-title-container{
+    padding: 0 15px 15px 15px;
+    color: #EDEDED;
+}
+.news-blocks .news-title-container .news-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.news-blocks .news-title-container p{
+    margin: 0;
+    font-size: small;
+}
+.news-big{
+    width: 49%;
+}
+.news-big .news-img{
+    height: 300px;
+}
+.news-small{
+    width: 32%;
+}
+.news-small .news-img{
+    height: 200px;
+}
+.news-small .news-title{
+    font-size: medium;
+}
+
+/* Footer */
+footer{
+    height: 30px;
+    text-align: center;
+    margin: 50px auto 20px auto;
+    /* padding-top: 300px; */
+}

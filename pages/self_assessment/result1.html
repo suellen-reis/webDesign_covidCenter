@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Self-Assessment</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles/self-assessment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <a class="nav dropdown-btn">Countries</a>
+                        <div class="dropdown-content">
+                            <a href="/pages/countries/usa.html">USA</a>
+                            <a href="/pages/countries/canada.html">Canada</a>
+                            <a href="/pages/countries/brazil.html">Brazil</a>
+                            <a href="/pages/countries/japan.html">Japan</a>
+                            <a href="/pages/countries/thailand.html">Thailand</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/pages/self_assessment/self_assessment.html" class="nav">Self Assessment</a></li>
+                <li><a href="/pages/contact.html" class="nav">Medical Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-secondary" id="results">
+            <h2>COVID-19 Self-Assessment Result</h2>
+            <p>Based on your answers, you are at a high risk of having COVID-19.</p>
+            <ul>
+                <li>Call 911; or</li> <br>
+                <li>Go directly to your nearest emergency department.</li>
+            </ul>
+            <br>
+            <button class="button-primary" onclick="location.href='self_assessment.html';">Take self-assessment again</button>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Trinity team</p>
+    </footer>
+    <script src="/index.js" async defer></script>
+</body>
+
+</html>

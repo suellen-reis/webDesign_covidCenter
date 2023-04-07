@@ -2,45 +2,113 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Center</title>
+        <title>Covid Center</title>
         <meta name="description" content="">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400;500;700&family=Overpass:wght@300&display=swap" rel="stylesheet">
+        <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
     </head>
     <body>
         <header>
-            <a href="index.html"><img src="images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+            <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
             <nav>
                 <ul>
-                    <li><a href="world.html" class="nav">World</a></li>
                     <li>
                         <div class="dropdown">
                             <a class="nav dropdown-btn">Countries</a>
                             <div class="dropdown-content">
-                                <a href="">USA</a>
-                                <a href="">Canada</a>
-                                <a href="">Brazil</a>
-                                <a href="">Japan</a>
-                                <a href="">Thailand</a>
+                                <a href="/pages/countries/usa.html">USA</a>
+                                <a href="/pages/countries/canada.html">Canada</a>
+                                <a href="/pages/countries/brazil.html">Brazil</a>
+                                <a href="/pages/countries/japan.html">Japan</a>
+                                <a href="/pages/countries/thailand.html">Thailand</a>
                             </div>
                         </div>
                     </li>
-                    <li><a href="self_assessment.html" class="nav">Self Assessment</a></li>
-                    <li><a href="contact.html" class="nav">Medical Help</a></li>
+                    <li><a href="/pages/self_assessment/self_assessment.html" class="nav">Self Assessment</a></li>
+                    <li><a href="/pages/contact.html" class="nav">Medical Help</a></li>
                 </ul>
             </nav>
         </header>
         <body>
             <div id="first-container">
-                <img src="images/pandemic.png" alt="">
-                <h1>Dolore officia ex duis consectetur labore voluptate duis esse irure enim qui aute et.</h1><br>
-                <p>Sit eu ut commodo occaecat exercitation ut Lorem nulla ipsum. Sint proident ex quis in in proident id duis exercitation velit id duis magna. Exercitation nulla aute cupidatat dolore culpa quis consectetur ad incididunt commodo. Eu incididunt ea consequat in adipisicing tempor esse officia nostrud fugiat sit. Culpa sunt Lorem ad commodo in commodo.</p>
+                <h1 class="main-title">Overview</h1>
+                <div id="covid-map"></div>
+
+                <!-- Insert tables from scrip -->
+                <div id="covidDataTable"><h3 class="tableTitle">Global</h3></div>
+                <div id="covidDataAsia"><h3 class="tableTitle">Asia</h3></div>
+                <div id="covidDataAfrica"><h3 class="tableTitle">Africa</h3></div>
+                <div id="covidDataEurope"><h3 class="tableTitle">Europe</h3></div>
+                <div id="covidDataNorthAmerica"><h3 class="tableTitle">North America</h3></div>
+                <div id="covidDataOceania"><h3 class="tableTitle">Oceania</h3></div>
+                <div id="covidDataSouthAmerica"><h3 class="tableTitle">South America</h3></div>
+
+            </div>
+            <div id="second-container">
+                <h1 class="main-title">News</h1>
+                <div class="news-blocks news-big">
+                    <a href="">
+                        <div>
+                            <img class="news-img" src="" alt="">
+                            <div class="news-title-container">
+                                <h3 class="news-title">Aliqua ullamco in pariatur ex.</h3>
+                                <p>date</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-blocks news-big news-right">
+                    <a href="">
+                        <div>
+                            <img class="news-img" src="" alt="">
+                            <div class="news-title-container">
+                                <h3 class="news-title">Aliqua ullamco in pariatur ex.</h3>
+                                <p>date</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-blocks news-small">
+                    <a href="">
+                        <div>
+                            <img class="news-img" src="" alt="">
+                            <div class="news-title-container">
+                                <h3 class="news-title">Aliqua ullamco in pariatur ex.</h3>
+                                <p>date</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-blocks news-small">
+                    <a href="">
+                        <div>
+                            <img class="news-img" src="" alt="">
+                            <div class="news-title-container">
+                                <h3 class="news-title">Aliqua ullamco in pariatur ex.</h3>
+                                <p>date</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-blocks news-small">
+                    <a href="">
+                        <div>
+                            <img class="news-img" src="" alt="">
+                            <div class="news-title-container">
+                                <h3 class="news-title">Aliqua ullamco in pariatur ex.</h3>
+                                <p>date</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
             
         </body>
         <footer>
-
+            <p>&copy; 2023 Trinity team</p>
         </footer>
-        <script src="index.js" async defer></script>
+        <script type="module" src="/index.js" defer></script>
     </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Self-Assessment</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles/self-assessment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <a class="nav dropdown-btn">Countries</a>
+                        <div class="dropdown-content">
+                            <a href="/pages/countries/usa.html">USA</a>
+                            <a href="/pages/countries/canada.html">Canada</a>
+                            <a href="/pages/countries/brazil.html">Brazil</a>
+                            <a href="/pages/countries/japan.html">Japan</a>
+                            <a href="/pages/countries/thailand.html">Thailand</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/pages/self_assessment/self_assessment.html" class="nav">Self Assessment</a></li>
+                <li><a href="/pages/contact.html" class="nav">Medical Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="section-secondary">
+            <h2>COVID-19 Self-Assessment</h2>
+            
+            <h3>Have you been told that you should currently be quarantinig, isolating or staying at home?</h3>
+            <p>Could include being told by a doctor, halth care provider, public health unit, federal border agent or other govenment authority.</p>
+
+            <div class="bottom-buttons">
+                <button class="button-secondary button-previous" onclick="location.href='question_covid_test.html';">Previous Page</button>
+
+                <span>
+                    <!-- YES = go to result3 page-->
+                    <button class="button-primary button-radio button-no-margin" onclick="location.href='result2.html';">YES</button>
+                    
+                    <!-- NO = go to question_covid_test page -->
+                    <button class="button-primary button-radio button-no-margin" onclick="location.href='result3.html';">NO</button><br>
+
+                </span>
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Trinity team</p>
+    </footer>
+    <script src="/index.js" async defer></script>
+</body>
+
+</html>

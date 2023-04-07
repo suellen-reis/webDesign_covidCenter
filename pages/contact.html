@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <meta name="description" content="contact">
+        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="/images/favicon_io/site.webmanifest">
+    </head>
+    <body>
+        <header>
+            <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <a class="nav dropdown-btn">Countries</a>
+                            <div class="dropdown-content">
+                                <a href="/pages/countries/usa.html">USA</a>
+                                <a href="/pages/countries/canada.html">Canada</a>
+                                <a href="/pages/countries/brazil.html">Brazil</a>
+                                <a href="/pages/countries/japan.html">Japan</a>
+                                <a href="/pages/countries/thailand.html">Thailand</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/pages/self_assessment/self_assessment.html" class="nav">Self Assessment</a></li>
+                    <li><a href="/pages/contact.html" class="nav">Medical Help</a></li>
+                </ul>
+            </nav>
+        </header>
+        <body>
+            <main id="first-container">
+                <h1>Contact us</h1>
+                <form>
+                    <label for="fname">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name"><br>
+                    <label for="email1">Email</label>
+                    <input type="email" id="email1" name="email1" placeholder="Email"><br>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
+                    <p>How can we contact you?</p>
+                    <input type="radio" id="email2" name="contact1" value="email2">
+                    <label for="email">Email</label><br>
+                    <input type="radio" id="phone" name="contact2" value="Phone" checked>
+                    <label for="phone">Phone</label><br>
+                    <p>What would you like to ask about?</p>
+                    <input type="radio" id="vaccination" name="vaccination" value="vaccination">
+                    <label for="firefox">Vaccination</label><br>
+                    <input type="radio" id="infection" name="infection" value="infection">
+                    <label for="Edge">Infection</label><br>
+                    <input type="radio" id="request" name="request" value="request">
+                    <label for="chrome">Request adding countries</label><br>
+                    <input type="radio" id="other" name="other" value="other">
+                    <label for="chrome">Other</label><br>
+                    <p>Your message</p>
+                    <label for="txt"></label>
+                    <textarea name="txtarea" id="txt" cols="100" rows="10">Massage</textarea><br>
+                    <input class="button-primary" type="submit" value="Send" onclick="alert('Thank you for contact us')">
+                </form>
+            </main>   
+        </body>
+        <footer>
+
+        </footer>
+    </body>
+</html>

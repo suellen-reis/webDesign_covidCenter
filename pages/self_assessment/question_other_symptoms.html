@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Self-Assessment</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles/self-assessment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <a class="nav dropdown-btn">Countries</a>
+                        <div class="dropdown-content">
+                            <a href="/pages/countries/usa.html">USA</a>
+                            <a href="/pages/countries/canada.html">Canada</a>
+                            <a href="/pages/countries/brazil.html">Brazil</a>
+                            <a href="/pages/countries/japan.html">Japan</a>
+                            <a href="/pages/countries/thailand.html">Thailand</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/pages/self_assessment/self_assessment.html" class="nav">Self Assessment</a></li>
+                <li><a href="/pages/contact.html" class="nav">Medical Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-secondary">
+            <h2>COVID-19 Self-Assessment</h2>
+            <h3>Do you have any of these symptoms?</h3>
+            <ul class="otherSymptoms">
+                <li>Fever and/or chills</li>
+                <li>Cough</li>
+                <li>Shortness of breath</li>
+                <li>Loss or change of sense of smell or taste</li>
+                <li>Muscle aches or joint pain, for example, aches or pains in your body that you don't normally have</li>
+                <li>Extreme tiredness</li>
+                <li>Sore throat</li>
+                <li>Runny or stuffy/congested nose</li>
+                <li>Headache</li>
+                <li>Nausea, vomiting and/or diarrhea</li>
+                <li>Abdominal pain</li>
+                <li>Pink eye</li>
+                <li>Decreased or no appetite (young children only)</li>
+            </ul>
+
+            <div class="bottom-buttons">
+                <button class="button-secondary button-previous" onclick="location.href='question_severe_symptoms.html';">Previous Page</button>
+                               
+                <span>
+                    <!-- YES = go to result3 page-->
+                    <button class="button-primary button-radio button-no-margin" onclick="location.href='result2.html';">YES</button>
+                    
+                    <!-- NO = go to question_covid_test page -->
+                    <button class="button-primary button-radio button-no-margin" onclick="location.href='question_covid_test.html';">NO</button>
+
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Trinity team</p>
+    </footer>
+    <script src="/scripts/selfAssessment.js" async defer></script>
+</body>
+
+</html>
