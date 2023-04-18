@@ -8,19 +8,52 @@ https://www.flaticon.com/packs/coronavirus-154?word=covid&style_id=8&family_id=3
 body{
     background-color: #171717;
     margin: 0;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', 'sans-serif';
     color: #EDEDED;
 }
 
-/* Logo */
-.logo{
-    float: left;
-    width: 20%;
-    margin: 40px;
+/* Navbar */
+.navbar{
+    padding: 15px;
+    margin: 10px;
+}
+.img-brand{
+    width: 30%;
+}
+div.collapse{
+    width: 45%;
+}
+a.nav-link, .navbar-nav .nav-link.active{
+    color: #EDEDED;
+    font-size: 1.5rem;
+    margin: 0 5px;
 }
 
-/* Navigation bar */
-header {
+.nav-link.dropdown-toggle.show{
+    color: #EDEDED;
+}
+ul.dropdown-menu.show li, ul.dropdown-menu.show{
+    background-color: #444444;
+    color: #EDEDED;
+}
+ul.dropdown-menu.show a{
+    color: #EDEDED;
+}
+.navbar-toggler{
+    background-color: gray;
+}
+/* Nav bar on hover */
+a.dropdown-toggle:hover{
+    color: #EDEDED;
+}
+a.nav-link:hover, .navbar-nav .nav-link.active:hover{
+    text-decoration: underline;
+}
+ul.dropdown-menu.show a:hover{
+    color: #171717;
+}
+
+/* header {
     display: block;
 }
 
@@ -36,12 +69,12 @@ header ul li{
 }
 
 /* Styling of dropdown in NAV bar */
-a.nav, .dropdown a{
+/* a.nav-link, .dropdown a{
     text-decoration: none;
     font-size: 1.5rem;
     margin: 20px;
     font-weight: 300;
-    color: inherit;
+    color: white;
 }
 
 a.nav:hover, .dropdown a:hover{
@@ -83,7 +116,7 @@ a.nav:hover, .dropdown a:hover{
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 
 /* Buttons Style */
@@ -172,7 +205,8 @@ a.nav:hover, .dropdown a:hover{
 }
 
 /* Table Tiles Style */
-.tableTitle {
+h3.main-table-title {
+    font-family: 'Titillium Web', sans-serif;
     margin-block-end: 0;
     color: #ff8ca9;
 }
@@ -201,10 +235,12 @@ td:first-child{
     border-top-right-radius: 30px;
 }
 .news-blocks .news-title-container{
-    padding: 0 15px 15px 15px;
+    padding: 15px;
     color: #EDEDED;
 }
 .news-blocks .news-title-container .news-title{
+    font-size: larger;
+    font-family: 'Titillium Web', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
     display: -webkit-box;
