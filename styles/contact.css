@@ -1,0 +1,46 @@
+main{
+    clear: left;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 30px;
+    color: #EDEDED;
+}
+
+main h1 {
+    font-size: 32px;
+}
+
+main p {
+    font-size: 16px;
+}
+
+main ul li {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+main ul li a {
+    text-decoration: none;
+    color: #EDEDED;
+}
+
+main ul li a:hover {
+    color: #da0037;
+}
+
+form {
+    padding-top: 30px;
+    padding-left: 45px;
+    background-color: #444444;
+}
+
+.error-field {
+    border: 2px solid #da0037;
+    background-color: #ff8ca9;
+}
+  
+.error-message {
+    font-size: 0.8em;
+    color: #da0037;
+    background-color: #ff8ca9;
+}

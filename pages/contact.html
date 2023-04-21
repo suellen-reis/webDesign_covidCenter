@@ -6,15 +6,17 @@
         <title>Contact</title>
         <meta name="description" content="contact">
         <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/styles/contact.css">
+        <script src="/scripts/contact.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="/images/favicon_io/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="../images/favicon_io/site.webmanifest">
     </head>
     <body>
         <header>
-            <a href="/index.html"><img src="/images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
+            <a href="/index.html"><img src="../images/covidCenter_logo.png" alt="image of logo" class="logo"></a>
             <nav>
                 <ul>
                     <li>
@@ -35,38 +37,57 @@
             </nav>
         </header>
         <body>
-            <main id="first-container">
-                <h1>Contact us</h1>
-                <form>
-                    <label for="fname">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name"><br>
-                    <label for="email1">Email</label>
-                    <input type="email" id="email1" name="email1" placeholder="Email"><br>
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br>
+            <main id="main">
+                <h1>Not sure of your condition</h1>
+                <ul>
+                    <li><a href="/pages/self_assessment/self_assessment.html">Check self-assessment of your condition</a></li>
+                    <li><a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/symptoms.html#s">Browse the symptoms of COVID-19</a></li>
+                    <li><a href="https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/covid-19-cold-flu-and-allergies-differences/art-20503981">Differences between COVID-19, cold, allergies and the flu</a></li>   
+                    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect/after.html">Possible Side Effects After Getting a COVID-19 Vaccine</a></li>
+                </ul>
+
+                <h1>Not sure of your condition</h1>
+                <p>If you have any questions, you can send a message to us.
+                    <br>Please fill out the form below, we will get back to you within 3 business days.</p>
+                <form id="contact-form">
+                    <label for="name">Your Name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Name" size="86" required>
+                    <span id="name-error" class="error-message"></span><br><br>
+                    
+                    <label for="email1">Email</label><br>
+                    <input type="email" id="email1" name="email1" placeholder="Email" size="86" required>
+                    <span id="email-error" class="error-message"></span><br><br>
+                    
+                    <label for="phone">Phone Number</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" size="86" required>
+                    <span id="phone-error" class="error-message"></span><br><br>
+                    
                     <p>How can we contact you?</p>
-                    <input type="radio" id="email2" name="contact1" value="email2">
+                    <input type="radio" id="email2" name="contact" value="email2">
                     <label for="email">Email</label><br>
-                    <input type="radio" id="phone" name="contact2" value="Phone" checked>
+                    <input type="radio" id="phone2" name="contact" value="Phone" checked>
                     <label for="phone">Phone</label><br>
+                    
                     <p>What would you like to ask about?</p>
-                    <input type="radio" id="vaccination" name="vaccination" value="vaccination">
-                    <label for="firefox">Vaccination</label><br>
-                    <input type="radio" id="infection" name="infection" value="infection">
-                    <label for="Edge">Infection</label><br>
-                    <input type="radio" id="request" name="request" value="request">
-                    <label for="chrome">Request adding countries</label><br>
-                    <input type="radio" id="other" name="other" value="other">
-                    <label for="chrome">Other</label><br>
+                    <input type="radio" id="vaccination" name="ask" value="vaccination">
+                    <label for="vaccination">Vaccination</label><br>
+                    <input type="radio" id="infection" name="ask" value="infection">
+                    <label for="infection">Infection</label><br>
+                    <input type="radio" id="request" name="ask" value="request">
+                    <label for="request">Request adding countries</label><br>
+                    <input type="radio" id="other" name="ask" value="other">
+                    <label for="other">Other (Please write in the message field)</label><br>
+                    
                     <p>Your message</p>
                     <label for="txt"></label>
-                    <textarea name="txtarea" id="txt" cols="100" rows="10">Massage</textarea><br>
-                    <input class="button-primary" type="submit" value="Send" onclick="alert('Thank you for contact us')">
-                </form>
+                    <textarea name="txtarea" id="txt" cols="80" rows="10" placeholder="Message"></textarea><br><br>
+                    
+                    <input class="button-primary" type="submit" value="Submit">
+                </form>                                                                              
             </main>   
         </body>
         <footer>
-
+            <p>&copy; 2023 Trinity team</p>
         </footer>
     </body>
 </html>
