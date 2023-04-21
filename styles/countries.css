@@ -15,22 +15,9 @@ div#covidTable table{
 >>>>>>> c7a1c49 (-Add line chart on countries page)
 }
 
-table {
-    border-collapse: collapse;
-    margin: auto;
-}
 
-tr {
-    display: block;
-    float: left;
-}
 h1#country-name{
     color: #DA0037;
-}
-
-div#covidTable table{
-    border-collapse: collapse;
-    width: 100%;
 }
 
 div#covidTable tr {
@@ -44,3 +31,5 @@ div#covidTable tr:hover {
     background-color: #171717;
     color: #EDEDED;
 }
+
+
