@@ -106,7 +106,7 @@ ul.dropdown-menu.show a:hover{
 #first-container, #second-container{
     clear: right;
     padding-top: 50px;
-    width: 1180px;
+    padding: 0 5%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -118,9 +118,6 @@ ul.dropdown-menu.show a:hover{
 }
 
 /* First container */
-#first-container{
-    padding: 0 5%;
-}
 #first-container table{
     border-collapse: collapse;
     width: 100%;
