@@ -109,7 +109,7 @@ function plotMap(originalData){
     
     var layout = {
         // title: 'Total infection in each country',
-        margin: {"r":35,"t":0,"l":0,"b":20},
+        margin: {"r":200,"t":10,"l":20,"b":20},
         paper_bgcolor: "#171717",
         plot_bgcolor: "rgba(0,0,0,0)",
         font: {
@@ -123,7 +123,12 @@ function plotMap(originalData){
             showcoastlines: false
         }
     };
-    Plotly.newPlot("covid-map", data, layout, {showLink: false});
+
+    var config = {
+        responsive: true,
+        showLink: false
+    }
+    Plotly.newPlot("covid-map", data, layout, config);
 }
 
 // ----------------------------------------------------------------------------

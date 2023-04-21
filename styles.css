@@ -8,7 +8,7 @@ https://www.flaticon.com/packs/coronavirus-154?word=covid&style_id=8&family_id=3
 body{
     background-color: #171717;
     margin: 0;
-    font-family: 'Titillium Web', 'sans-serif';
+    font-family: 'Titillium Web', 'sans-serif' !important;
     color: #EDEDED;
 }
 
@@ -52,71 +52,6 @@ a.nav-link:hover, .navbar-nav .nav-link.active:hover{
 ul.dropdown-menu.show a:hover{
     color: #171717;
 }
-
-/* header {
-    display: block;
-}
-
-header ul{
-    list-style-type: none;
-    margin-top: 40px;
-    margin-right: 40px;
-    float: right;
-}
-
-header ul li{
-    display: inline;
-}
-
-/* Styling of dropdown in NAV bar */
-/* a.nav-link, .dropdown a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin: 20px;
-    font-weight: 300;
-    color: white;
-}
-
-a.nav:hover, .dropdown a:hover{
-    border-bottom: 1px solid #EDEDED;
-}
-
-.dropdown{
-    display: inline;
-}
-
-.dropdown-btn{
-    border: none;
-    outline: none;
-    font-family: inherit;
-}
-
-.dropdown-content{
-    display: none;
-    background-color: #444444;
-    z-index: 1;
-    position: absolute;
-    box-shadow: 1px;
-}
-
-.dropdown-content a{
-    font-size: 1rem;
-    display: block;
-    text-align: left;
-    margin: 0;
-    padding: 15px;
-    min-width: 120px;
-}
-
-.dropdown-content a:hover{
-    background-color: #EDEDED;
-    color: #171717;
-    text-shadow: none;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-} */
 
 
 /* Buttons Style */
@@ -179,9 +114,13 @@ a.nav:hover, .dropdown a:hover{
 /* Titles */
 .main-title{
     color: #DA0037;
+    font-family: 'Titillium Web', 'sans-serif' !important;
 }
 
 /* First container */
+#first-container{
+    padding: 0 5%;
+}
 #first-container table{
     border-collapse: collapse;
     width: 100%;

@@ -67,8 +67,11 @@ function plotHistorical(data, plottingCountry){
         },
         margin: {"t": 0}
       };
+    var config = {
+        responsive: true,
+    }
       
-    Plotly.newPlot('lineChart', data, layout);
+    Plotly.newPlot('lineChart', data, layout, config);
       
     
 }
