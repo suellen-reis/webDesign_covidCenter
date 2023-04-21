@@ -1,17 +1,14 @@
 // Get the form and the submit button
 const form = document.getElementById('contact-form');
-const submitBtn = form.querySelector('input[type="submit"]');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-// Add event listener to form submission
-form.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent form from submitting
-  
+function validateForm(){
   // Check for errors
   let errors = false;
   
   // Check name field
-  const nameField = form.querySelector('#name');
-  const nameError = form.querySelector('#name-error');
+  let nameField = form.querySelector('#name');
+  let nameError = form.querySelector('#name-error');
   if (nameField.value.trim() === '') {
     errors = true;
     nameField.classList.add('error-field');
@@ -22,8 +19,8 @@ form.addEventListener('submit', (event) => {
   }
   
   // Check email field
-  const emailField = form.querySelector('#email1');
-  const emailError = form.querySelector('#email-error');
+  let emailField = form.querySelector('#email1');
+  let emailError = form.querySelector('#email-error');
   if (emailField.value.trim() === '') {
     errors = true;
     emailField.classList.add('error-field');
@@ -38,8 +35,8 @@ form.addEventListener('submit', (event) => {
   }
   
   // Check phone field
-  const phoneField = form.querySelector('#phone');
-  const phoneError = form.querySelector('#phone-error');
+  let phoneField = form.querySelector('#phone');
+  let phoneError = form.querySelector('#phone-error');
   if (phoneField.value.trim() === '') {
     errors = true;
     phoneField.classList.add('error-field');
@@ -61,7 +58,8 @@ form.addEventListener('submit', (event) => {
     alert('Thank you for your contact!'); 
     form.submit(); 
   }
-});
+};
+
 
 // Function to validate email
 function isValidEmail(email) {
