@@ -6,10 +6,10 @@
 // Only one of the following function should be activated at a time
 
 // Use the following function if API connection is needed
-// apiConnection();
+apiConnection();
 
 // Use the following function if file connection is needed
-fileConnection();
+// fileConnection();
 
 // ----------------------------------------------------------------------------
 
