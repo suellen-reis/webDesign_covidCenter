@@ -6,7 +6,7 @@ The project uses data from VACCOVID API and present in web-form. The website is 
 
 ## Contribution
 The project is done with my classmates.
-* Suellen Reis Santos De Oliveira Motta: Responsible of tables management and Self-assessment page
+* [Suellen Reis Santos De Oliveira Motta](https://github.com/suellen-reis): Responsible of tables management and Self-assessment page
 * Mikiko Takara: Responsible of Medical help page
 
 ## Reference
